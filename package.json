@@ -1,0 +1,35 @@
+{
+  "name": "awesome_project",
+  "version": "1.0.0",
+  "description": "Your awesome project description",
+  "license": "ISC",
+  "author": "",
+  "main": "gulpfile.js",
+  "directories": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "core-js": "^2.6.11",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-prettier": "*",
+    "gulp": "^4.0.2",
+    "include-media": "^1.4.9",
+    "input-range-scss": "latest",
+    "normalize.css": "latest",
+    "postcss-preset-env": "latest",
+    "postcss-scss": "^2.1.1",
+    "prettier": "^1.19.1",
+    "stylefmt": "^6.0.3",
+    "stylelint": "^13.5.0",
+    "stylelint-config-recess-order": "^2.0.4",
+    "stylelint-config-standard-scss": "^1.1.0",
+    "stylelint-scss": "^3.17.2"
+  }
+}

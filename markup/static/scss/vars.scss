@@ -1,0 +1,13 @@
+/* stylelint-disable scss/at-rule-no-unknown */
+// Colors
+$primary-color: #331A2F !default;
+$secondary-color: #CF51CE !default;
+
+$body-bg: #fff !default;
+$body-color: rgba($tertiary-color, 0.8) !default;
+
+// Typography
+$main-font: "Lato", "Helvetica", sans-serif !default;
+
+// Breakpoints
+$breakpoints: (sm: 360px, md: 768px, lg: 1280px, xl: 1920px);
