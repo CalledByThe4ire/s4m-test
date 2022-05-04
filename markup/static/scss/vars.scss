@@ -4,7 +4,7 @@ $primary-color: #331A2F !default;
 $secondary-color: #CF51CE !default;
 
 $body-bg: #fff !default;
-$body-color: rgba($tertiary-color, 0.8) !default;
+$body-color: rgba($primary-color, 0.8) !default;
 
 // Typography
 $main-font: "Lato", "Helvetica", sans-serif !default;
