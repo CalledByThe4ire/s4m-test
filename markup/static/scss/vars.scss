@@ -11,3 +11,6 @@ $main-font: "Lato", "Helvetica", sans-serif !default;
 
 // Breakpoints
 $breakpoints: (sm: 360px, md: 768px, lg: 1280px, xl: 1920px);
+
+// Animation
+$transition: all 0.3s ease-in-out;

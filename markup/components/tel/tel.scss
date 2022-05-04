@@ -1,0 +1,32 @@
+.tel {
+  display: none;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: $primary-color;
+  font-size: 18px;
+  line-height: 1;
+  margin-right: 80px;
+  transition: $transition;
+
+  @include media('>=lg') {
+    display: flex;
+  }
+
+  @include media('>=xl') {
+    font-size: 24px;
+  }
+
+  .icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    transition: $transition;
+
+    @include media('>=xl') {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

@@ -1,31 +1,10 @@
 .page-header {
   display: flex;
   flex-flow: row nowrap;
+  min-height: 53px;
+  transition: $transition;
 
-  &__link,
-  &__image-container,
-  &__image {
-    display: block;
-  }
-
-  &__image {
-    width: 140px;
-    height: 47px;
-    transition: all 0.3s ease-in-out;
-
-    @include media('>sm', '<=md') {
-      width: 354px;
-      height: 82px;
-    }
-
-    @include media('>md', '<=lg') {
-      width: 353px;
-      height: 75px;
-    }
-
-    @include media('>lg') {
-      width: 470px;
-      height: 93px;
-    }
+  @include media('>=lg') {
+    min-height: initial;
   }
 }

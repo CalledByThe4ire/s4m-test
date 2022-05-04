@@ -1,0 +1,56 @@
+.login {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1;
+  border-radius: 6px;
+  background-color: $secondary-color;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover,
+  &:active {
+    background-color: darken($color: $secondary-color, $amount: 15%);
+  }
+
+  @include media('>=md') {
+    margin-top: 10px;
+    padding: 12px 32px;
+    font-size: 20px;
+    border-radius: 12px;
+  }
+
+  @include media('>=lg') {
+    font-size: 18px;
+  }
+
+  @include media('>=xl') {
+    font-size: 23px;
+  }
+
+  .icon {
+    width: 13px;
+    height: 13px;
+    max-width: initial;
+    margin-right: 8px;
+    transition: $transition;
+
+    @include media('>=md') {
+      margin-right: 14px;
+    }
+
+    @include media('>=md', '<xl') {
+      width: 20px;
+      height: 20px;
+    }
+
+    @include media('>=xl') {
+      width: 23px;
+      height: 23px;
+    }
+  }
+}

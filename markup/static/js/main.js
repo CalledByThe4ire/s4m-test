@@ -1,3 +1,4 @@
-/*
-    This file can be used as entry point for webpack!
- */
+/* eslint-disable import/no-unresolved */
+
+// components
+import 'components/nav/nav';

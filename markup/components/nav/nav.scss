@@ -1,0 +1,61 @@
+.nav {
+  display: flex;
+  align-items: center;
+
+  @include media('<lg') {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+    margin-top: 15px;
+  }
+
+  &__list-item {
+    &:not(:last-of-type) {
+      margin-right: 35px;
+      transition: $transition;
+
+      @include media('>=xl') {
+        margin-right: 50px;
+      }
+    }
+
+    &--training {
+      display: none;
+
+      @include media('>=xl') {
+        display: flex;
+      }
+    }
+
+    .icon {
+      transform: rotate(-90deg);
+    }
+
+    &--is-opened {
+      .icon {
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    color: $primary-color;
+    font-size: 18px;
+    text-decoration: none;
+    transition: $transition;
+
+    @include media('>=xl') {
+      font-size: 24px;
+    }
+
+    p {
+      margin-right: 10px;
+    }
+  }
+}

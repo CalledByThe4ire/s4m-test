@@ -1,0 +1,15 @@
+.menu {
+  display: flex;
+  align-self: flex-end;
+  margin-left: 6%;
+
+  @include media('>=md') {
+    margin-top: 10px;
+    margin-left: 80px;
+    align-self: center;
+  }
+
+  @include media('>=lg') {
+    display: none;
+  }
+}
