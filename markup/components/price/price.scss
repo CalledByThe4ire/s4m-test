@@ -9,6 +9,10 @@
     margin-bottom: 44px;
   }
 
+  @include media('>=xl') {
+    margin-bottom: 24px;
+  }
+
   .icon {
     margin-right: 26px;
   }

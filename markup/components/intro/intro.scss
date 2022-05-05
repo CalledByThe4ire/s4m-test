@@ -1,14 +1,24 @@
 .intro {
   display: block;
+  margin-bottom: 85px;
   transition: $transition;
+
+  @include media('>=md') {
+    margin-bottom: 65px;
+  }
 
   @include media('>=lg', '<xl') {
     max-width: 70%;
     padding-right: 25px;
   }
 
+  @include media('>=lg') {
+    margin-bottom: 75px;
+  }
+
   @include media('>=xl') {
     max-width: 60%;
+    margin-bottom: 145px;
     padding-right: initial;
   }
 
@@ -95,17 +105,23 @@
   }
 
   &__text {
-    margin-bottom: 10px;
     transition: $transition;
+
+    &:not(:last-of-type) {
+      margin-bottom: 10px;
+    }
 
     @include media('>sm', '<md') {
       max-width: 85%;
     }
 
     @include media('>=md') {
-      margin-bottom: 16px;
       padding-right: 270px;
       font-size: 20px;
+
+      &:not(:last-of-type) {
+        margin-bottom: 16px;
+      }
     }
 
     @include media('>=lg') {
@@ -113,7 +129,7 @@
     }
 
     @include media('>=xl') {
-      padding-right: 25px;
+      padding-right: 45px;
       font-size: 25px;
       line-height: 40px;
     }

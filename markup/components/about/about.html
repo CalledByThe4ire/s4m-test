@@ -1,0 +1,17 @@
+<section class="about">
+  <h3 class="about__heading">Как работает модуль Аналитика по&nbsp;API для&nbsp;Wildberries?</h3>
+  <ul class="about__list">
+    {{#each this}}
+    <li class="about__list-item">
+      <svg class="icon icon--{{icon.name}}" width="{{icon.width}}" height="{{icon.height}}">
+        <use xlink:href="#{{icon.name}}"></use>
+      </svg>
+      <div class="about__content-block">
+        {{#each paragraphs}}
+        <p class="about__text">{{{this}}}</p>
+        {{/each}}
+      </div>
+    </li>
+    {{/each}}
+  </ul>
+</section>
