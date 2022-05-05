@@ -1,4 +1,5 @@
 .page {
+  position: relative;
   display: block;
   margin: 0 auto;
   padding: 15px;
@@ -6,7 +7,51 @@
   width: inherit;
   min-width: map-get($map: $breakpoints, $key: sm);
   max-width: map-get($map: $breakpoints, $key: xl);
+  overflow-x: hidden;
   transition: $transition;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: -100%;
+    display: block;
+    width: 446px;
+    height: 446px;
+    background-image: url('%=static=%assets/page/bg-ellipse1.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: $transition;
+
+    @include media('>=lg') {
+      left: -415px;
+    }
+
+    @include media('>=xl') {
+      top: -200px;
+      left: -675px;
+      width: 782px;
+      height: 782px;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 385px;
+    left: 100%;
+    display: block;
+    width: 759px;
+    height: 759px;
+    background-image: url('%=static=%assets/page/bg-ellipse2.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: $transition;
+
+    @include media('>=xl') {
+      left: 98%;
+    }
+  }
 
   @include media('>=lg') {
     @include padding-x(40px);
