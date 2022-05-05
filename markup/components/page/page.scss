@@ -6,7 +6,6 @@
   height: inherit;
   min-width: map-get($map: $breakpoints, $key: sm);
   max-width: map-get($map: $breakpoints, $key: xl);
-  outline: 1px dashed red;
   transition: $transition;
 
   @include media('>=lg') {

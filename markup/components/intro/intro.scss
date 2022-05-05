@@ -1,0 +1,121 @@
+.intro {
+  display: block;
+  transition: $transition;
+
+  @include media('>=lg', '<xl') {
+    max-width: 70%;
+    padding-right: 25px;
+  }
+
+  @include media('>=xl') {
+    max-width: 60%;
+    padding-right: initial;
+  }
+
+  &__heading {
+    margin-bottom: 28px;
+    padding-right: 135px;
+    font-family: $main-font;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 39px;
+    transition: $transition;
+
+    span {
+      color: $secondary-color;
+    }
+
+    @include media('<=sm') {
+      padding-right: initial;
+    }
+
+    @include media('>=md') {
+      margin-bottom: 20px;
+      padding-right: initial;
+      font-size: 46px;
+      line-height: 65px;
+    }
+
+    @include media('>=lg', '<xl') {
+      margin-bottom: 40px;
+    }
+
+    @include media('>=xl') {
+      padding-right: 25px;
+      font-size: 56px;
+      line-height: 80px;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 130px;
+    right: -110px;
+    display: block;
+    width: 245px;
+    height: 245px;
+    background-image: url('%=static=%assets/intro/superman-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: $transition;
+
+    @include media('<=sm') {
+      position: static;
+      top: initial;
+      right: initial;
+      width: 200px;
+      height: 200px;
+
+      @include margin-x(auto);
+      margin-bottom: 25px;
+    }
+
+    @include media('>=md') {
+      top: 325px;
+      right: -170px;
+      width: 410px;
+      height: 410px;
+    }
+
+    @include media('>=lg') {
+      top: 190px;
+      right: 40px;
+      width: 458px;
+      height: 458px;
+      background-image: url('%=static=%assets/intro/superman-desktop.svg');
+    }
+
+    @include media('>=xl') {
+      top: 215px;
+      right: 190px;
+      width: 620px;
+      height: 604px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 10px;
+    transition: $transition;
+
+    @include media('>sm', '<md') {
+      max-width: 85%;
+    }
+
+    @include media('>=md') {
+      margin-bottom: 16px;
+      padding-right: 270px;
+      font-size: 20px;
+    }
+
+    @include media('>=lg') {
+      padding-right: initial;
+    }
+
+    @include media('>=xl') {
+      padding-right: 25px;
+      font-size: 25px;
+      line-height: 40px;
+    }
+  }
+}
