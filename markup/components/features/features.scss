@@ -1,0 +1,115 @@
+.features {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+
+  &__heading {
+    @include padding-x(25px);
+    margin-bottom: 24px;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+
+    @include media('>=md') {
+      font-size: 40px;
+      line-height: 64px;
+    }
+
+    @include media('>=lg') {
+      max-width: 60%;
+      margin-bottom: 34px;
+      @include padding-x(initial);
+      font-size: 48px;
+    }
+
+    @include media('>=xl') {
+      margin-bottom: 30px;
+    }
+
+    > span {
+      position: relative;
+      display: inline-flex;
+      padding-bottom: 1px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(264.91deg, #7c4eab 0.73%, #dd51d4 95.85%);
+        border-radius: 5px;
+
+        @include media('>=md') {
+          height: 6px;
+        }
+
+        @include media('>=xl') {
+          height: 8px;
+        }
+      }
+
+      span {
+        color: $secondary-color;
+      }
+    }
+  }
+
+  &__description {
+    margin-bottom: 30px;
+    text-align: center;
+
+    @include media('>=md') {
+      margin-bottom: 60px;
+      font-size: 20px;
+      line-height: 32px;
+    }
+
+    @include media('>=lg') {
+      max-width: 60%;
+    }
+
+    @include media('>=xl') {
+      font-size: 25px;
+      line-height: 40px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-flow: column wrap;
+
+    > * {
+      margin-bottom: 20px;
+    }
+
+    @include media('>=md') {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      column-gap: 65px;
+      @include margin-x(84px);
+
+      > * {
+        margin-bottom: 10px;
+      }
+    }
+
+    @include media('>=lg') {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr;
+      @include margin-x(initial);
+
+      > * {
+        margin-bottom: initial;
+      }
+    }
+
+    @include media('>=xl') {
+      column-gap: 100px;
+    }
+  }
+}

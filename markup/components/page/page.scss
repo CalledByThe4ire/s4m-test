@@ -2,8 +2,8 @@
   display: block;
   margin: 0 auto;
   padding: 15px;
+  padding-bottom: 30px;
   width: inherit;
-  height: inherit;
   min-width: map-get($map: $breakpoints, $key: sm);
   max-width: map-get($map: $breakpoints, $key: xl);
   transition: $transition;
@@ -11,10 +11,12 @@
   @include media('>=lg') {
     @include padding-x(40px);
     padding-top: 20px;
+    padding-bottom: 60px;
   }
 
   @include media('>=xl') {
     @include padding-x(195px);
     padding-top: 20px;
+    padding-bottom: 120px;
   }
 }
