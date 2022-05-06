@@ -1,7 +1,8 @@
-<ul class="breadcrumbs">
+<ul class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
   {{#each this}}
-    <li class="breadcrumbs__item">
-      <a class="breadcrumbs__link" href="#">{{this}}</a>
-    </li>
+  <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+    <a class="breadcrumbs__link" href="#" itemprop="item"><span itemprop="name">{{this}}</span></a>
+    <meta itemprop="position" content={{inc @index}}>
+  </li>
   {{/each}}
 </ul>
