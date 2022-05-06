@@ -29,6 +29,10 @@
       max-width: initial;
     }
 
+    @include media('>=lg') {
+      max-width: 60%;
+    }
+
     span {
       color: $secondary-color;
     }
@@ -61,6 +65,16 @@
     @include media('>sm') {
       display: block;
       float: right;
+    }
+
+    @include media('>=lg') {
+      margin-bottom: initial;
+      transform: translateY(-265px);
+    }
+
+    @include media('>=xl') {
+      width: 620px;
+      height: 605px;
     }
   }
 

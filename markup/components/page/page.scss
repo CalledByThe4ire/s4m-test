@@ -1,5 +1,4 @@
 .page {
-  position: relative;
   display: block;
   margin: 0 auto;
   padding: 15px;
@@ -12,10 +11,10 @@
 
   &::before {
     content: '';
-    position: absolute;
-    top: -40px;
-    left: -100%;
-    display: block;
+    position: fixed;
+    top: -110px;
+    left: -420px;
+    display: none;
     width: 446px;
     height: 446px;
     background-image: url('%=static=%assets/page/bg-ellipse1.svg');
@@ -24,12 +23,12 @@
     transition: $transition;
 
     @include media('>=lg') {
-      left: -415px;
+      display: block;
     }
 
     @include media('>=xl') {
-      top: -200px;
-      left: -675px;
+      top: -180px;
+      left: -680px;
       width: 782px;
       height: 782px;
     }
@@ -37,10 +36,10 @@
 
   &::after {
     content: '';
-    position: absolute;
-    top: 385px;
-    left: 100%;
-    display: block;
+    position: fixed;
+    top: 380px;
+    right: -720px;
+    display: none;
     width: 759px;
     height: 759px;
     background-image: url('%=static=%assets/page/bg-ellipse2.svg');
@@ -49,7 +48,7 @@
     transition: $transition;
 
     @include media('>=xl') {
-      left: 98%;
+      display: block;
     }
   }
 
