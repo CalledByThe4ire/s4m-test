@@ -68,7 +68,7 @@
     }
 
     @include media('>=lg') {
-      margin-bottom: initial;
+      margin-bottom: -265px;
       transform: translateY(-265px);
     }
 
