@@ -1,4 +1,5 @@
 .intro {
+  position: relative;
   display: block;
   margin-bottom: 85px;
   transition: $transition;
@@ -7,41 +8,33 @@
     margin-bottom: 65px;
   }
 
-  @include media('>=lg', '<xl') {
-    max-width: 70%;
-    padding-right: 25px;
-  }
-
   @include media('>=lg') {
     margin-bottom: 75px;
   }
 
   @include media('>=xl') {
-    max-width: 60%;
     margin-bottom: 145px;
-    padding-right: initial;
   }
 
   &__heading {
+    max-width: 60%;
     margin-bottom: 28px;
-    padding-right: 135px;
     font-family: $main-font;
     font-weight: 600;
     font-size: 26px;
     line-height: 39px;
     transition: $transition;
 
+    @include media('>sm') {
+      max-width: initial;
+    }
+
     span {
       color: $secondary-color;
     }
 
-    @include media('<=sm') {
-      padding-right: initial;
-    }
-
     @include media('>=md') {
       margin-bottom: 20px;
-      padding-right: initial;
       font-size: 46px;
       line-height: 65px;
     }
@@ -51,56 +44,23 @@
     }
 
     @include media('>=xl') {
-      padding-right: 25px;
       font-size: 56px;
       line-height: 80px;
     }
   }
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 130px;
-    right: -110px;
+  &__image-container {
     display: block;
-    width: 245px;
-    height: 245px;
-    background-image: url('%=static=%assets/intro/superman-mobile.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    transition: $transition;
+  }
 
-    @include media('<=sm') {
-      position: static;
-      top: initial;
-      right: initial;
-      width: 200px;
-      height: 200px;
+  &__image {
+    display: none;
+    margin-bottom: 16px;
+    padding-left: 16px;
 
-      @include margin-x(auto);
-      margin-bottom: 25px;
-    }
-
-    @include media('>=md') {
-      top: 325px;
-      right: -170px;
-      width: 410px;
-      height: 410px;
-    }
-
-    @include media('>=lg') {
-      top: 190px;
-      right: 40px;
-      width: 458px;
-      height: 458px;
-      background-image: url('%=static=%assets/intro/superman-desktop.svg');
-    }
-
-    @include media('>=xl') {
-      top: 215px;
-      right: 190px;
-      width: 620px;
-      height: 604px;
+    @include media('>sm') {
+      display: block;
+      float: right;
     }
   }
 
@@ -111,12 +71,7 @@
       margin-bottom: 10px;
     }
 
-    @include media('>sm', '<md') {
-      max-width: 85%;
-    }
-
     @include media('>=md') {
-      padding-right: 270px;
       font-size: 20px;
 
       &:not(:last-of-type) {
@@ -124,14 +79,27 @@
       }
     }
 
-    @include media('>=lg') {
-      padding-right: initial;
-    }
-
     @include media('>=xl') {
-      padding-right: 45px;
       font-size: 25px;
       line-height: 40px;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -45px;
+    right: -125px;
+    display: block;
+    width: 245px;
+    height: 245px;
+    background-image: url('%=static=%assets/intro/superman-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: $transition;
+
+    @include media('>sm') {
+      display: none;
     }
   }
 }
