@@ -10,7 +10,6 @@
   &__item {
     font-size: 16px;
     line-height: 1;
-    color: rgba($color: $primary-color, $alpha: 0.5);
 
     &:not(:last-of-type) {
       &::after {
@@ -22,5 +21,9 @@
   &__link {
     text-transform: capitalize;
     text-decoration: none;
+
+    &:any-link {
+      color: rgba($color: $primary-color, $alpha: 0.5);
+    }
   }
 }

@@ -20,6 +20,7 @@
     "eslint-plugin-import": "^2.19.1",
     "eslint-plugin-prettier": "*",
     "gulp": "^4.0.2",
+    "gulp-gh-pages": "^0.5.4",
     "include-media": "^1.4.9",
     "input-range-scss": "latest",
     "normalize.css": "latest",
